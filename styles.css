@@ -104,11 +104,30 @@ header .login a:hover {
     background-color: #fff;
     transition: 0.6s smooth;
 }
-header #toggler {
+header #toggler1 {
+    display: none;
+}
+header #toggler2 {
     display: none;
 }
 
+header .togglers{
+    display: flex;
+    justify-content: flex-end;
+}
+
 header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+
+header .fa-right-to-bracket {
     font-size: 3rem;
     color: #333;
     border-radius: 0.5rem;
@@ -486,23 +505,32 @@ header .fa-bars {
 }
 
 @media (max-width:768px) {
+
+    /* toggler for navbar  */
     header .fa-bars {
         display: block;
     }
 
     header .logo img {
-        width:5rem;
+        width:7rem;
+    }
+
+    header .togglers{
+        display: flex;
+        justify-content: flex-end;
+        /* flex:wrap; */
     }
     
     header .navbar{
         position: absolute;
-        top:100%; left:0; right: 0;
+        top:100%; 
+        left:0; right: 0;
         background: #eee; 
         border-top:1rem solid rgba(0,0,0,.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    header #toggler:checked ~ .navbar{
+    header #toggler1:checked ~ .navbar{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
@@ -514,9 +542,36 @@ header .fa-bars {
         display: block;
     }
 
-    header .login {
-        display: none;
+    /* toggler for signin and signup */ 
+    header .fa-right-to-bracket {
+        display: block;
     }
+    
+    header .login{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: #eee; 
+        border-top:1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    /* header #toggler2:checked ~ .login{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    } */
+
+    /* header .login a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        color: #333;
+        display: block;
+    } */
+
+
+    /* header .login {
+        display: none;
+    } */
 
     .home .content h3{
         font-size: 5rem;
@@ -533,7 +588,11 @@ header .fa-bars {
     .icons-container .icons span{
         font-size: 1.8rem;
     }
-}
+
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+    }
 
 @media (max-width:450px) {
 
