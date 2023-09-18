@@ -390,17 +390,18 @@ header .fa-right-to-bracket {
     gap: 3rem;
     justify-content: space-between;
     flex:wrap;
+    background-color: #333;
 }
 
 .newsletter h1{
     font-size: 3rem;
-    color: #333;
+    color: #fff;
 }
 .newsletter .input-container{
     display: flex; 
     /* overflow: hidden; */
     box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
-    flex-basis: 60%;
+    flex-basis: 50%;
 }
 .newsletter .input-container .email{
     flex:1;
@@ -416,7 +417,7 @@ header .fa-right-to-bracket {
     font-weight: bold;
     border: none;
     /* border-radius: 0 1rem 1rem 0; */
-    background-color: #333;
+    background-color: #be1818;
     transition: 0.5s ease;
     flex: 0.3;
 }
@@ -424,7 +425,10 @@ header .fa-right-to-bracket {
     background-color: #eee;
     color: #333;
 }
-
+.footer{
+    background-color: #333;
+    color: #fff;
+}
 .footer .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -436,23 +440,22 @@ header .fa-right-to-bracket {
 }
 
 .footer .box-container .box h3{
-    color: #333;
+    color: #fff;
     font-size: 2rem;
     padding: 1rem 0;
 }
 
 .footer .box-container .box a{
     display: block;
-    color: #666;
+    color: #eee;
     font-size: 1.5rem;
     padding: .7rem 0;
 }
 
 .footer .box-container .box a:hover{
     text-decoration: underline;
-    color: var(--blue);
+    color: lightskyblue;
 }
-
 .footer .box-container .box .icon{
     padding-right: 1rem;
 }
@@ -463,19 +466,29 @@ header .fa-right-to-bracket {
 }
 .footer .footer-logo .logo img{
     width:10rem;
+    /* mix-blend-mode: multiply; */
 }
 .footer .footer-logo .btn{
     padding:.8rem 2.5rem;
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
+.footer .back-to-top{
+    color: #333;
+    background-color: #eee;
+}
+.footer .back-to-top:hover{
+    color: #eee;
+    border: .1rem solid #eee;
+    background-color: #555;
+}
 .footer .copyright{
     text-align: center;
     padding: 1.5rem;
     margin-top: 1.5rem;
     font-size: 1.5rem;
-    color: #333;
-    border-top: .2rem solid rgba(0, 0, 0, 0.1);
+    color: rgb(238, 238, 238);
+    border-top: .2rem solid rgba(238, 238, 238, 0.1);
 }
 
 /* media queries  */
@@ -499,6 +512,10 @@ header .fa-right-to-bracket {
 
     header .login a {
         font-size:  1.5rem;
+    }
+    .newsletter .input-container{
+        padding: .4rem 0.4rem; 
+        /* border-radius: 1rem 0 0 1rem; */
     }
 }
 
